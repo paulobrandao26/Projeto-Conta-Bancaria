@@ -1,9 +1,36 @@
 import readlinesync = require("readline-sync");
+import { ContaCorrente } from './src/util/model/ContaCorrente';
+import { ContaPoupanca } from './src/util/model/ContaPoupanca';
 import { colors } from './src/util/Colors';
+import { Conta } from './src/util/model/Conta';
 
 export function main() {
 
     let opcao: number;
+
+    // Objeto da Classe Conta (Teste)
+    const conta: Conta = new Conta(1, 123, 1, "Paulo Brandão", 11000);
+    conta.visualizar();
+    conta.sacar(10500);
+    conta.visualizar();
+    conta.depositar(5000);
+    conta.visualizar();
+ 
+    // Objeto da Classe ContaCorrente (Teste)
+    const contacorrente: ContaCorrente = new ContaCorrente(2, 123, 1, "Mariana", 15000, 1000);
+    contacorrente.visualizar();
+    contacorrente.sacar(2000);
+    contacorrente.visualizar();
+    contacorrente.depositar(1000);
+    contacorrente.visualizar();
+
+    // Objeto da Classe ContaPoupanca (teste)
+    const contapoupanca: ContaPoupanca = new ContaPoupanca(3, 123, 2, "Victor", 1000, 10);
+    contapoupanca.visualizar();
+    contapoupanca.sacar(200);
+    contapoupanca.visualizar();
+    contapoupanca.depositar(1000);
+    contapoupanca.visualizar();
 
     while (true) {
 
@@ -102,9 +129,9 @@ export function main() {
 /* Função com os dados da pessoa desenvolvedora */
 function sobre(): void {
     console.log("\n*****************************************************");
-    console.log("Projeto Desenvolvido por: ");
-    console.log("Generation Brasil - generation@generation.org");
-    console.log("github.com/conteudoGeneration");
+    console.log("Projeto Desenvolvido por: Paulo Henrique de Barros Brandão ");
+    console.log("Generation Brasil - paulobrandaohbb@gmail.com");
+    console.log("https://github.com/paulobrandao26");
     console.log("*****************************************************");
 }
 
