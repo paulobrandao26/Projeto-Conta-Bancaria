@@ -1,10 +1,14 @@
+import { ContaCorrente } from "./ContaCorrente";
+
 export abstract class Conta {
+     
 
     private _numero: number;
     private _agencia: number;
     private _tipo: number;
     private _titular: string;
     private _saldo: number;
+    
 
     constructor(numero: number, agencia: number, tipo: number, titular: string, saldo: number) {
         this._numero = numero;
